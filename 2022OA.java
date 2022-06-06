@@ -79,6 +79,13 @@ public class Q5 {
 
 // Editorial:
 
+We try to find the number of subsequences with each element having a fixed frequency and add them all.
+First let's find the frequencies of all the elements and keep them in sorted order. Let it be f1, f2, .., fr.
+No of subsequences with each element having frequency k will be- ( 1+C(f1, k) ) ( 1+C(f2, k) ) ...( 1+C(fr, k) ) -1 where C(n, r) is the combinatorial function.
+Now if we iterate k from 1 to n, it will be an O(n2) solution. Now we just need to iterate over elements which are greater than k in the frequency array which can easily be done using binary search.
+Now each fi 
+
+
 const int M = 1e9 + 7;
 int expo(int a, int b, int mod){
     int ans = 1;
